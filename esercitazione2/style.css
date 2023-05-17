@@ -1,0 +1,72 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+
+
+body{
+    background-color: black;
+
+}
+.general_title{
+    font-family: 'Bebas Neue', sans-serif;
+    color: rgb(202, 0, 0);
+    text-align: center;
+    font-size: 90px;
+   margin: 0;
+}
+
+
+
+#img_home{
+    width: 100%;
+    height: 90%;
+    justify-content: center;
+}
+
+
+.nb_list {
+    color: antiquewhite;
+    list-style-type: none;
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+    font-size: 30px;
+
+}
+
+#nb_list1, #nb_list2, #nb_list3{
+ display: inline-block;
+
+}
+
+
+.descrizione{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 50px;
+    color: antiquewhite;
+    text-align: center;
+    margin: 10px;
+
+}
+
+footer{
+    background-color: rgb(202, 0, 0);
+    border-radius: 15px;
+    text-align: center;
+}
+
+.ft_list{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 20px;
+    color: white ;
+    list-style-type: none;
+    text-align: justify;
+    text-decoration: none;
+    justify-content: center;
+   
+}
+
+.ft_list:hover{
+    color: black;
+}
+
+.nb_list:hover{
+    color: rgb(202, 0, 0);
+}
