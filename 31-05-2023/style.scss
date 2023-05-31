@@ -1,0 +1,125 @@
+//colors
+$background: #f9e4cb;
+$primary: #283618;
+$secondary: #fefae0;
+$terziary: #fbac51;
+
+//borders
+$borderdiv: 4px solid #283618;
+$borderradius: 25px;
+
+//font
+$font: Arial,
+Helvetica,
+sans-serif;
+
+//media query
+$mobile: 768px;
+
+@mixin mobile{
+    @media (max-width:$mobile) {
+        @content;
+        @include flex(2rem,column);
+    }
+}
+//mixin
+
+@mixin flex($gap, $flex-dir){
+    display: flex;
+    flex-direction: $flex-dir;
+    justify-content: space-around;
+    align-items: center;
+    gap: $gap;
+}
+
+@mixin navfooter{
+    background-color: $primary;
+    height: 4rem;
+    width: 100%;
+}
+
+@mixin ul{
+    list-style-type: none;
+    font-size: 1.5em;
+    padding: 0;
+    margin: 0;
+}
+
+
+body{
+    background-color: $background;
+    margin: 0;
+    padding: 0;
+    font-family: $font;
+    nav{
+        @include navfooter;
+        ul{
+            
+            @include flex(20px, row);
+            @include ul;
+
+            li{
+               color: $secondary;
+               margin-top: 1rem;
+
+               &:hover{
+                 color: $terziary;
+               }
+
+            }
+        }
+    }
+
+    main{
+        @include flex(2rem,column);
+        h2{
+            color: $primary;
+            text-align: center;
+            font-size: 3rem;
+            font-weight: 800;
+            
+
+        }
+        .div_main{
+            @include flex(2rem, row);
+            margin: 0rem 1.5rem 5rem 1.5rem ;
+            @include mobile();
+            
+            div{
+                border: $borderdiv;
+                border-radius: $borderradius;
+                background-color: $terziary;
+                
+                p{
+                    font-size: 1.2rem;
+                    font-weight: 500;
+                    padding: 0 1rem;
+                    text-align: center
+                }
+            }
+        }
+    }
+
+    footer{
+        @include navfooter();
+        margin-top: 4rem;
+        width: 100%;
+        position: fixed;
+        bottom: 0;
+        
+
+        ul{
+            @include ul;
+            @include flex(4rem, row);
+            
+            li{
+             color: $secondary;
+             margin-top: 1rem;
+
+             &:hover{
+                color: $terziary;
+             }
+            }
+        }
+    }
+}
